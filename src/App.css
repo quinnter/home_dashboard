@@ -36,3 +36,44 @@
     transform: rotate(360deg);
   }
 }
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(#eada80 15%, transparent 50%),
+    radial-gradient(#2dafcd 20%, transparent 50%),
+    radial-gradient(#4f4fb3 25%, transparent 50%),
+    radial-gradient(#a156b0 25%, transparent 50%);
+  background-size: 60% 80%, 70% 80%, 80% 80%, 80% 80%;
+  background-position: 0 0%, 0 100%, 50% 0, 50% 100%;
+  background-repeat: no-repeat;
+  transform: scale(4);
+
+  overflow: hidden;
+}
+
+.background-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* height: 100vh; */
+  overflow: hidden;
+  position: relative;
+  background-color: #4f4fb3;
+}
+
+/* background: radial-gradient(#80deea 25%, transparent 50%),
+radial-gradient(#ffab91 25%, transparent 50%),
+radial-gradient(#8cdbbf 25%, transparent 50%),
+radial-gradient(#b4d195 25%, transparent 50%); */
+/* 
+background-size: 60% 80%, 70% 80%, 80% 80%, 80% 80%;
+background-position: 0 5%, 0 100%, 50% 0, 50% 100%; */
+
+/* background-position: 0 0%, 0 10%, 50% 0, 50% 100%; rainbow-y */

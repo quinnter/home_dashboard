@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500&family=Oswald&display=swap')
+
+h4
+    margin: 0
+    color: white
+
+.frosted
+	// Frosted Glass Effect, works on chrome might not work on others.
+    padding: 10px
+    background: rgba(255,255,255,0.2)
+    backdrop-filter: blur(5px)
+
+.largeFrostedSquare
+    background: rgba(255,255,255,0.2)
+    backdrop-filter: blur(5px)
+    width: 364px
+    // height: 364px
+    border-radius: 18px
+    display: flex
+    margin: 10px
+    padding: 20px
+
+    h1
+        font-size: 4em
+        color: white
+        text-align: center
+
+.smallFrostedRectangle
+    height: 170px
+    width: 364px
+    background: rgba(255,255,255,0.2)
+    backdrop-filter: blur(5px)
+    border-radius: 18px
+    display: flex
+    align-items: center
+    justify-content: center
+
+    h1
+        font-size: 4em
+        color: white
+
+.largeSquareInnerContainer
+    display: flex
+    gap: 10px
+    flex-direction: column
+    width: 100%
+
+.weatherIconAndDegreesContainer
+    display: flex
+    flex-direction: row
+    gap: 24px
+    justify-content: space-between
+
+.innerSquareContainer
+    width: 170px
+    height: 170px
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+
+.degreesText
+    margin: 0
+    color: white
+    font-size: 85px
+    text-align: right
+
+.largeIcon
+    color: rgba(255,255,255,0.4)
+    font-size: 90px
+    padding: 15px
+
+.dailyWeatherContainer
+    // height: 170px
+    width: 100%
+    display: flex
+    flex-direction: column
+
+.dailyWeatherRowContainer
+    display: flex
+    align-items: center
+    color: white
+    justify-content: space-between
+    height: 50px
+
+.iconAndRainProbability
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    width: 20%
+    height: 40px
+
+.rainProbabilityText
+    margin: 3px
+    font-size: 12px
+
+.temperatureRangeContainer
+    display: flex
+    align-items: center
+    gap: 5px
+    width: 70%
+    justify-content: space-between
+
+.minTemperatureText
+    margin: 0
+    font-weight: bold
+    color: rgba(255,255,255,0.4)
+
+.maxTemperatureText
+    margin: 0
+    text-align: end
+    font-weight: bold
+
+.hourlyContainer
+    display: flex
+    color: white
+    gap: 20px
+    justify-content: space-between
+
+.hourlyWeather
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    i
+        font-size: 34px
+
+    .tempText
+        font-weight: bold
+
+.currentIconAndTemperatureContainer
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+
+.currentWeatherContainer
+    display: flex
+    flex-direction: column
+
+.weatherDescriptionAndFeelsLike
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    padding-top: 5px
+
+    h4
+        color: rgba(255,255,255,0.4)
