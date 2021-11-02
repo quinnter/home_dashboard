@@ -139,7 +139,7 @@ export default function FlipClock() {
     // get new date
     const time = new Date();
     // set time units
-    const currentHours = time.getHours();
+    const currentHours = time.getHours() % 12 || 12;
     const currentMinutes = time.getMinutes();
     const currentDay = time.getDate();
     const currentWeekday = time
