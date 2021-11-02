@@ -1,5 +1,5 @@
 import React from "react";
-import "./test.sass";
+import "./styles.sass";
 
 // function component
 const AnimatedCard = ({ animation, digit }) => {
@@ -183,17 +183,8 @@ export default function FlipClock() {
   });
 
   return (
-    <div
-      style={{
-        display: "flex",
-        gap: "1em",
-        // backgroundColor: "black",
-        alignItems: "center",
-        flexDirection: "column",
-        padding: "2em"
-      }}
-    >
-      <div className={"flipClock"}>
+    <div className={"flipClockContainer"}>
+      <div className={"flipClockSquareContainer"}>
         <FlipUnitContainer
           unit={"hours"}
           digit={hours}
@@ -205,14 +196,14 @@ export default function FlipClock() {
           shuffle={minutesShuffle}
         />
       </div>
-      <div className={"flipClock"}>
+      <div>
         <FlipUnitContainerWeekday
           weekday={weekday}
           shuffle={weekdayShuffle}
           time={time}
         />
       </div>
-      <div className={"flipClock"}>
+      <div className={"flipClockSquareContainer"}>
         <FlipUnitContainerMonth month={month} shuffle={monthShuffle} />
         <FlipUnitContainer digit={day} shuffle={dayShuffle} unit={"days"} />
       </div>
