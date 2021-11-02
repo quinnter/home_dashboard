@@ -9,7 +9,7 @@ function App() {
       <div className="background"></div>
       <div style={{ display: "flex", justifyContent: "space-between" }}>
         <FlipClock />
-        <DateAndTimeContainer />
+        {/* <DateAndTimeContainer /> */}
         <Weather />
       </div>
     </div>

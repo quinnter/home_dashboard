@@ -34,16 +34,19 @@ const FlipUnitContainerWeekday = ({ weekday, shuffle }) => {
 
   // shuffle animations
   const animation1 = shuffle
-    ? "flipCardDate foldDate"
-    : " flipCardDate unfoldDate";
+    ? "flipCard fold weekday"
+    : " flipCard unfold month";
   const animation2 = !shuffle
-    ? "flipCardDate foldDate"
-    : "flipCardDate unfoldDate";
+    ? "flipCard fold weekday"
+    : "flipCard unfold weekday";
 
   return (
-    <div className={"flipUnitContainerLarge"}>
-      <StaticCard position={"upperCardDate"} digit={currentValue} />
-      <StaticCard position={"lowerCardDate"} digit={previousValueAsString} />
+    <div className={"flipUnitContainer large"}>
+      <StaticCard position={"upperCard weekday"} digit={currentValue} />
+      <StaticCard
+        position={"lowerCard weekday"}
+        digit={previousValueAsString}
+      />
       <AnimatedCard digit={weekday1} animation={animation1} />
       <AnimatedCard digit={weekday2} animation={animation2} />
     </div>
@@ -63,13 +66,13 @@ const FlipUnitContainerMonth = ({ month, shuffle }) => {
   const month2 = !shuffle ? previousValueAsString : currentValue;
 
   // shuffle animations
-  const animation1 = shuffle ? "flipCard fold" : "flipCard unfold";
-  const animation2 = !shuffle ? "flipCard fold" : "flipCard unfold";
+  const animation1 = shuffle ? "flipCard fold month" : "flipCard unfold month";
+  const animation2 = !shuffle ? "flipCard fold month" : "flipCard unfold month";
 
   return (
     <div className={"flipUnitContainer"}>
-      <StaticCard position={"upperCard"} digit={currentValue} />
-      <StaticCard position={"lowerCard"} digit={previousValueAsString} />
+      <StaticCard position={"upperCard month"} digit={currentValue} />
+      <StaticCard position={"lowerCard month"} digit={previousValueAsString} />
       <AnimatedCard digit={month1} animation={animation1} />
       <AnimatedCard digit={month2} animation={animation2} />
     </div>
@@ -108,7 +111,7 @@ const FlipUnitContainer = ({ digit, shuffle, unit }) => {
   return (
     <div className={"flipUnitContainer"}>
       <StaticCard position={"upperCard"} digit={currentDigit} />
-      {/* <StaticCard position={"lowerCard"} digit={previousDigit} /> */}
+      <StaticCard position={"lowerCard"} digit={previousDigit} />
       <AnimatedCard digit={digit1} animation={animation1} />
       <AnimatedCard digit={digit2} animation={animation2} />
     </div>
