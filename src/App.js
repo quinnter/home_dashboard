@@ -1,5 +1,4 @@
 import "./App.css";
-import DateAndTimeContainer from "./DateAndTime/DateAndTimeContainer";
 import Weather from "./Weather/Weather";
 import FlipClock from "./FlipClock/FlipClock";
 
@@ -15,7 +14,6 @@ function App() {
         }}
       >
         <FlipClock />
-        {/* <DateAndTimeContainer /> */}
         <Weather />
       </div>
     </div>
