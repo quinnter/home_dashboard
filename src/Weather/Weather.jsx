@@ -8,20 +8,14 @@ import CurrentWeather from "./CurrentWeather";
 let maxBy = require("lodash/maxBy");
 let minBy = require("lodash/minBy");
 
-// const handleClick = () => {
-//   api.owmOneCallAPI().then(response => {
-//     console.log({ response: response });
-//   });
-// };
-
 export default function Weather() {
   const [weather, setWeather] = React.useState(dummyWeather);
 
-  //   if (process.env.REACT_APP_OPEN_WEATHER_MAP_API_KEY) {
-  //     api.owmOneCallAPI().then(response => {
-  //       setWeather(response);
-  //     });
-  //   }
+  const handleClick = () => {
+    api.owmOneCallAPI().then(response => {
+      setWeather(response);
+    });
+  };
 
   const minDailyTempObj = minBy(weather.daily, "temp.min");
   const maxDailyTempObj = maxBy(weather.daily, "temp.max");
@@ -29,6 +23,7 @@ export default function Weather() {
   return (
     <div className={"largeFrostedSquare"}>
       <div className={"largeSquareInnerContainer"}>
+        <button onClick={handleClick}>Grab Weather</button>
         <CurrentWeather currentWeather={weather.current} />
         <HourlyWeather hourlyWeather={weather.hourly} />
         <div className={"dailyWeatherContainer"}>
@@ -39,6 +34,8 @@ export default function Weather() {
                 dailyWeather={day}
                 rangeMin={minDailyTempObj.temp.min}
                 rangeMax={maxDailyTempObj.temp.max}
+                // rangeMin={6}
+                // rangeMax={25}
               />
             );
           })}

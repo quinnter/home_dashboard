@@ -23,6 +23,7 @@ const calculateColourIndex = temperature => {
 };
 
 const generateGradientColours = (rangeMin, rangeMax) => {
+  // Match the min and max values to colours for the gradient and return as a string
   const colourValues = gradientColours.slice(
     calculateColourIndex(rangeMin),
     calculateColourIndex(rangeMax) + 1
@@ -43,7 +44,11 @@ export default function TemperatureRange({
 }) {
   const width = 165;
   const widthIncrement = width / (rangeMax - rangeMin);
+  // Divide the bar into equal pixels. Ex Range 0 - 10 means each section is 16.5px wide
   const marginPixels = (dayMin - rangeMin) * widthIncrement;
+  // Starting point for the gradient div. rangeMin is always far left, dayMin is always >= to rangeMin. Ex if Thu dayMin is 2, we want the margin to be 33px wide
+  const rangeWidth = widthIncrement * (dayMax - dayMin);
+  // Total range in pixels.
 
   const gradientColours = generateGradientColours(rangeMin, rangeMax);
 
@@ -60,9 +65,10 @@ export default function TemperatureRange({
         position: "relative"
       }}
     >
+      {/* Use background postion to stick gradient to far left, otherwise it starts where gradient component starts */}
       <div
         style={{
-          width: widthIncrement * (dayMax - dayMin),
+          width: rangeWidth,
           marginLeft: `${marginPixels}px`,
           height: "100%",
           borderRadius: "25px",

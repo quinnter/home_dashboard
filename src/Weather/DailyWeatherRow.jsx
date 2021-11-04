@@ -32,8 +32,8 @@ export default function DailyWeatherRow({ dailyWeather, rangeMin, rangeMax }) {
         <TemperatureRange
           rangeMin={rangeMin}
           rangeMax={rangeMax}
-          dayMin={dailyWeather.temp.min}
-          dayMax={dailyWeather.temp.max}
+          dayMin={Math.round(dailyWeather.temp.min)}
+          dayMax={Math.round(dailyWeather.temp.max)}
         />
         <div style={{ width: 30 }}>
           <p className={"maxTemperatureText"}>{`${Math.round(
