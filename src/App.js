@@ -7,7 +7,13 @@ function App() {
   return (
     <div className="background-container">
       <div className="background"></div>
-      <div style={{ display: "flex", justifyContent: "space-between" }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          margin: "10px"
+        }}
+      >
         <FlipClock />
         {/* <DateAndTimeContainer /> */}
         <Weather />

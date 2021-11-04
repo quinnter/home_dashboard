@@ -35,7 +35,7 @@ const FlipUnitContainerWeekday = ({ weekday, shuffle }) => {
   // shuffle animations
   const animation1 = shuffle
     ? "flipCard fold weekday"
-    : " flipCard unfold month";
+    : " flipCard unfold weekday";
   const animation2 = !shuffle
     ? "flipCard fold weekday"
     : "flipCard unfold weekday";
