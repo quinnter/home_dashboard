@@ -3,7 +3,7 @@ import "./styles.sass";
 import TemperatureRange from "./TemperatureRange";
 
 export default function DailyWeatherRow({ dailyWeather, rangeMin, rangeMax }) {
-  console.log(dailyWeather);
+
   return (
     <div className="dailyWeatherRowContainer">
       <div style={{ width: "10%" }}>
