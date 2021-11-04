@@ -23,7 +23,6 @@ export default function Weather() {
   return (
     <div className={"largeFrostedSquare"}>
       <div className={"largeSquareInnerContainer"}>
-        <button onClick={handleClick}>Grab Weather</button>
         <CurrentWeather currentWeather={weather.current} />
         <HourlyWeather hourlyWeather={weather.hourly} />
         <div className={"dailyWeatherContainer"}>
@@ -34,8 +33,6 @@ export default function Weather() {
                 dailyWeather={day}
                 rangeMin={minDailyTempObj.temp.min}
                 rangeMax={maxDailyTempObj.temp.max}
-                // rangeMin={6}
-                // rangeMax={25}
               />
             );
           })}
