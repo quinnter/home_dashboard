@@ -1,7 +1,12 @@
-# 🏠 Home Dashboard 
+# 🏠 Home Dashboard
 
-A small personal project using React to create a single page dashboard. 
+A small personal project using React to create a single page dashboard.
 
+This is part of a larger project involving [Home Assistant](https://www.home-assistant.io/) which I have set up on a Raspberry Pi. As my collection of smart devices grows I plan on integrating more insightful dashboard components.
+
+Next step is using Google APIs to hook up the household calendar and task list to the dashboard.
+
+<img src="https://github.com/quinnter/home_dashboard/raw/main/src/assets/screenshot1.png" height="220" />
 
 # Getting Started with Create React App
 
@@ -43,8 +48,3 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-
-
-
-
