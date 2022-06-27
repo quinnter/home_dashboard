@@ -6,7 +6,7 @@ This is part of a larger project involving [Home Assistant](https://www.home-ass
 
 Next step is using Google APIs to hook up the household calendar and task list to the dashboard.
 
-<img src="https://github.com/quinnter/home_dashboard/raw/main/src/assets/screenshot1.png" height="220" />
+<img src="https://github.com/quinnter/home_dashboard/raw/main/src/assets/screenshot1.png" />
 
 # Getting Started with Create React App
 
